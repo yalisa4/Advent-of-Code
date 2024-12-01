@@ -28,3 +28,4 @@ if __name__ == "__main__":
         inhoud = file.readlines()
 
     print(AoC_2024_1(inhoud))
+
