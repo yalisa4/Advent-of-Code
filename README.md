@@ -1,2 +1,2 @@
 # AoC
-Hier zijn mijn scripts weergeven van 'Advent of Code'
+Here are my scripts for solving the Advent of Code challenges.
