@@ -1,31 +1,28 @@
 def AoC_2024_1(datastream: list) -> tuple:
-    links_kol, rechts_kol = [], []
+    left_col, right_col = [], []
     total_distance, similarity_score = 0, 0
 
-    for regel in datastream:
-        line = regel.split()
-        links_kol.append(int(line[0]))
-        rechts_kol.append(int(line[1]))
+    for record in datastream:
+        line = record.split()
+        left_col.append(int(line[0]))
+        right_col.append(int(line[1]))
 
-    for number in links_kol:
-        voorkomst = rechts_kol.count(number)
+    for number in left_col:
+        voorkomst = right_col.count(number)
         similarity_score += voorkomst * number
 
-    while links_kol and rechts_kol:
-        left_min = min(links_kol)
-        right_min = min(rechts_kol)
+    left_col.sort()
+    right_col.sort()
 
-        total_distance += abs(left_min - right_min)
-
-        links_kol.remove(left_min)
-        rechts_kol.remove(right_min)
+    for number in range(len(left_col)):
+        total_distance += abs(left_col[number] - right_col[number])
 
     return total_distance, similarity_score
 
 
 if __name__ == "__main__":
-    with open("AoC_2024_1") as file:
+    with open("2024/AoC_2024_1.txt") as file:
         inhoud = file.readlines()
 
     print(AoC_2024_1(inhoud))
-
+    
