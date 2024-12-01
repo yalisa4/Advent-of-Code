@@ -8,21 +8,20 @@ def AoC_2024_1(datastream: list) -> tuple:
         right_col.append(int(line[1]))
 
     for number in left_col:
-        voorkomst = right_col.count(number)
-        similarity_score += voorkomst * number
+        occurences = right_col.count(number)
+        similarity_score += occurences * number
 
     left_col.sort()
     right_col.sort()
 
-    for number in range(len(left_col)):
-        total_distance += abs(left_col[number] - right_col[number])
+    for num in range(len(left_col)):
+        total_distance += abs(left_col[num] - right_col[num])
 
     return total_distance, similarity_score
 
 
 if __name__ == "__main__":
     with open("2024/AoC_2024_1.txt") as file:
-        inhoud = file.readlines()
+        content = file.readlines()
 
-    print(AoC_2024_1(inhoud))
-    
+    print(AoC_2024_1(content))
