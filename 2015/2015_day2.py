@@ -28,7 +28,7 @@ def wrapping_paper(input_file: list) -> 0:
 
 
 if __name__ == "__main__":
-    with open("2015_day2.txt") as file:
+    with open("2015/2015_day2.txt") as file:
         inhoud = file.readlines()
 
     print(wrapping_paper(inhoud))

@@ -13,7 +13,7 @@ def floor(input_file: str) -> 0:
 
 
 if __name__ == "__main__":
-    with open("2015_day1.txt") as file:
+    with open("2015/2015_day1.txt") as file:
         inhoud = file.read()
 
     print(floor(inhoud))

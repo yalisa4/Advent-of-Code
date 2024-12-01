@@ -24,7 +24,7 @@ def AoC_2023_1(fh: str) -> int:
 
 
 if __name__ == "__main__":
-    with open("AoC_2023_1", "r") as file:
+    with open("2015/AoC_2023_1", "r") as file:
         inhoud = file.readlines()
 
     print(AoC_2023_1(inhoud))

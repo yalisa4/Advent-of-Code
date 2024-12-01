@@ -7,7 +7,7 @@ def AoC_2017_2(file: list) -> int:
 
 
 if __name__ == "__main__":
-    with open("AoC_2017_2", "r") as fh:
+    with open("2015/AoC_2017_2", "r") as fh:
         inhoud = fh.readlines()
 
     print(AoC_2017_2(inhoud))

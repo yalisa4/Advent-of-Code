@@ -44,7 +44,7 @@ def parttwo(datastream):
 
 
 if __name__ == "__main__":
-    with open("2015_day5.txt") as file:
+    with open("2015/2015_day5.txt") as file:
         inhoud = file.readlines()
 
     #print(correct_naughty(inhoud))
