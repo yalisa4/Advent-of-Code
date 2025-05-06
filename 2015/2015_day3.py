@@ -1,4 +1,19 @@
-def aoc_3(content):
+def aoc_3(content: str) -> tuple:
+    """
+    Calculate how many unique houses recieve at least
+    one present in part 1 and part 2 of Advent of Code 2015 - Day 3.
+
+    param:
+        content: A string of directional instructions, consisting of 
+        the characters '^', 'v', '<', and '>'.
+    
+    returns:
+        tuple: Two integers:
+            - The number of unique houses visited by Santa alone (part 1)
+            - The number of unique houses visited by both Santa and 
+            Robo-Santa (part 2).
+    """
+    
     def right_dir(pos):
         return (pos[0], pos[1] + 1)
 
@@ -45,6 +60,11 @@ def aoc_3(content):
     return len(visited), len(visited_santa_robot)
 
 if __name__ == "__main__":
+    """
+    This script reads movement instructions from a text file and
+    calculates how many unique houses receive presents from Santa
+    alone (part 1) and from both Santa and Robo-Santa (part 2).
+    """
     with open("2015/2015_day3.txt") as file:
         content = file.read()
 
